@@ -19,3 +19,32 @@ typedef vector<lli> vi;
 #define _ ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 #define printVector(s) for(lli i = 0; i < ((s).size()); i++) {print(s[i])}
 
+
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> a(n);
+    for(int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    int q;
+    cin >> q;
+
+    for(int i = 0; i < q; i++) {
+        int k;
+        cin >> k;
+
+        if (binary_search(a.begin(), a.end(), k)) {
+            cout << 1 << "\n";
+        } else {
+            cout << 0 << "\n";
+        }
+    }
+
+    return 0;
+}
