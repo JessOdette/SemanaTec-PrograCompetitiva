@@ -22,6 +22,7 @@ int main() {
         int indexA = 0;
         int indexB = 0;
     
+
         while (indexA < n && indexB < m) {
             if ((a[indexA] < b[indexB] && countA < k) || countB == k) {
                 c += a[indexA++];
@@ -33,7 +34,6 @@ int main() {
                 countA = 0;  
             }
         }
-
         cout << c << endl;
     }
 

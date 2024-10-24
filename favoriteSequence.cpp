@@ -16,13 +16,23 @@ int main(){
             cin >> a[i];
         }
 
-    
-    vector<pair<int, int>> b;
+        int initial = 0;
+        int final = n-1;
+
+        while (initial <= final) {
+            if (initial <= final) {
+                cout << a[initial];
+                initial++;
+            }
+            if (initial <= final) {
+                cout << a[final];
+                final--;
+            }
+        }
+
+
     for (int i = 0; i < n; i++) {
-        b.push_back({a[i], i});
+        cout << a[i] << " ";
     }
-    sort(b.begin(), b.end());
-    for (int i = 0; i < n; i++) {
-        a[i] = b[i].first;
-    }
+  }
 }
